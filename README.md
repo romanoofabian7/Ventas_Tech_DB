@@ -31,7 +31,9 @@ Proyecto de análisis de ventas de RetailPro con SQL Server, scripts T-SQL y Pow
 
 Los scripts corregidos de M4 y M5 están preparados para el esquema con tablas `ventas`, `clientes`, `productos` y `categorias`, y columnas como `fecha_venta`, `id_cliente`, `id_producto` y `precio_unitario`.
 
-El esquema que crea actualmente `proyecto.sql` usa nombres distintos, como `Ventas`, `Clientes`, `Productos`, `Fecha`, `ClienteID`, `ProductoID` y `Cantidad`; el precio está en `Productos.Precio`. Por eso, M4 y M5 no se ejecutan directamente sobre la base creada por `proyecto.sql`. Usalos con la versión del esquema para la que fueron corregidos o alineá las tablas y columnas antes de ejecutarlos.
+El esquema que crea actualmente `proyecto.sql` usa nombres distintos, como `Ventas`, `Clientes`, `Productos`, `Fecha`, `ClienteID`, `ProductoID` y `Cantidad`; el precio está en `Productos.Precio`. Por eso, M4 y M5 no se ejecutan directamente sobre la base creada por `proyecto.sql`.
+
+Para ejecutar M4 o M5, conectate a SQL Server desde SSMS, abrí el script correspondiente y seleccioná la base que tenga el esquema compatible con esos nombres de tablas y columnas. M4 incluye la instrucción `USE Ventas_Tech_DB`; M5 no, así que confirmá la base activa antes de ejecutarlo. Si solo tenés el esquema de `proyecto.sql`, primero alineá las tablas y columnas.
 
 M5 incluye inserciones de un cliente y un producto de prueba. Si volvés a ejecutar esas inserciones sobre la misma base, pueden fallar por claves duplicadas; revisalas antes de repetir la ejecución.
 
